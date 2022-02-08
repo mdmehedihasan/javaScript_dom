@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="secondId">Welcome to my blog</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Blog List</h2>
+            <ul id="blog_list">
+                <li>Blog-1</li>
+                <li>Blog-2</li>
+                <li>Blog-3</li>
+                <li>Blog-4</li>
+            </ul>
+        </section>
+        <section id="secId">
+
+            <article class="paraClasa">
+                <h3 id="firstId">My Awesome Blog-1</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi esse eligendi necessitatibus rem
+                    veritatis ipsa tenetur repellendus dolorem quo odit!
+                </p>
+
+            </article>
+
+            <article class="paraClasa">
+                <h1>My Awesome Blog-2</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi esse eligendi necessitatibus rem
+                    veritatis ipsa tenetur repellendus dolorem quo odit!
+                </p>
+            </article>
+
+            <article class="paraClasa">
+                <h3>My Awesome Blog-3</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi esse eligendi necessitatibus rem
+                    veritatis ipsa tenetur repellendus dolorem quo odit!</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>all right reserved.</p>
+    </footer>
+
+    <script>
+
+        // const firstId = document.getElementById('firstId');
+        // firstId.style.color = 'red';
+        // const secondId = document.getElementById('secondId');
+        // secondId.innerText = "Text updated by JavaScript";
+        // secondId.style.backgroundColor = 'red';
+        // secondId.style.textAlign = 'center';
+        // secondId.style.padding = '30px';
+
+        // const className = document.getElementsByClassName('paraClasa');
+        // for (const blog of className) {
+        //     blog.style.border = '2px solid orange';
+        //     blog.style.borderRadius = '10px';
+        //     blog.style.margin = '10px';
+        //     blog.style.padding = '10px';
+        //}
+
+
+        const testNew = document.getElementsByTagName("h3");
+
+        for (const takeNow of testNew) {
+            takeNow.style.color = 'red';
+        }
+        //create and add element by javaScript
+        const li = document.createElement('li');
+        li.innerText = 'blog-5';
+
+        // where to add
+        const ul = document.getElementById('blog_list');
+
+        // add element
+        ul.appendChild(li);
+
+        // add article
+        const h3 = document.createElement('h3');
+        const article = document.createElement('article');
+        article.classList.add('paraClasa');
+
+        h3.innerText = 'my awesome blog-4';
+        const p = document.createElement('p');
+        p.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi esse eligendi necessitatibus rem';
+
+        article.appendChild(h3);
+        article.appendChild(p)
+
+        //parent of article
+        const blogsection = document.getElementById('secId');
+        blogsection.appendChild(article);
+
+        //bactick use for adding block
+        article.innerHTML = `
+        <h3> My awesome blog-5 </h3>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi esse eligendi necessitatibus rem</p>
+        `
+
+
+        const blog = document.getElementsByClassName('paraClasa');
+        for (const content of blog) {
+            content.style.color = 'white';
+            content.style.backgroundColor = 'black';
+            content.style.padding = '10px';
+            content.style.margin = '10px';
+            content.style.borderRadius = '10px';
+        }
+    </script>
+</body>
+
+</html>
